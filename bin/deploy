@@ -5,6 +5,10 @@ var path = require('path');
 
 buildPath = path.join(__dirname, '..', 'build');
 
-ghpages.publish(buildPath, function (err) {
+ghpages.publish(buildPath, {
+  logger: function (message) {
+    console.log("deploying... ", buildPath, message);
+  },
+}, function (err) {
   if (err) { throw err; }
 });
