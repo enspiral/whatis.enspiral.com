@@ -452,7 +452,7 @@ main {
   font-size: 1.5em;
   background: #f2f2f2;
   color: #3f3f3f;
-  font-family: gill sans, helvetica, arial, arial, sans-serif;
+  font-family: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -595,8 +595,7 @@ p {
 }
 
 h1 {
-  font-family: didot, times new roman, serif;
-  font-style: italic;
+  font-family: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
 }
 
 h1 {
@@ -604,7 +603,7 @@ h1 {
 }
 
 h2 {
-  font-family: gill sans, helvetica, arial, arial, sans-serif;
+  font-family: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.1em;
