@@ -10,8 +10,9 @@
     <meta property="og:type" content="{{ type }}" />
     <meta property="article:publisher" content="{{ publisher }}" />
     <title>{{ title }}</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="./bundle.css" />
+    {% for href in stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ href }}" />
+    {% endfor %}
   </head>
   <body>
     <main>
