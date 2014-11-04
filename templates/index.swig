@@ -18,6 +18,8 @@
     <main>
       {% include "./slides.swig" %}
     </main>
-    <script type="text/javascript" src="./bundle.js" defer="defer"></script>
+    {% for href in scripts %}
+    <script type="text/javascript" src="{{ href }}"></script>
+    {% endfor %}
   </body>
 </html>
