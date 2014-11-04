@@ -3,9 +3,8 @@
 :root {
   --white: #f2f2f2;
   --black: #3f3f3f;
-  --orange: #f30;
   --serif: didot, times new roman, serif;
-  --sans-serif: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
+  --sans: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
   --monospace: prestige elite std, consolas, courier new, monospace;
   --emdash: '\2014';
   --slideWidth: 720px;
@@ -23,7 +22,7 @@ html, body, main {
   font-size: 1.5em;
   background: var(--white);
   color: var(--black);
-  font-family: var(--sans-serif);
+  font-family: var(--sans);
   position: absolute;
   top: 0;
   left: 0;
@@ -99,102 +98,16 @@ html, body, main {
   height: 100%;
   transition: width 1s ease;
 }
-.bespoke-bullet {
-  transition: opacity .3s ease;
-}
 
-.bespoke-bullet-inactive {
-  opacity: 0;
-}
-
-strong {
-  font-weight: 400;
-}
-
-h1 strong {
-  font-weight: 600;
-}
-
-h1, h2, h3, p, li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-h1, h2, h3, p, li, pre {
-  font-weight: 200;
-}
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-h1 {
-  font-family: var(--sans-serif);
-}
-
-h1 {
-  margin: 0.17em 0;
-}
-
-h2 {
-  font-family: var(--sans-serif);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1em;
-  margin: 0.1em 0;
-}
-
-h3 {
-  font-style: normal;
-  font-size: 0.8em;
-  margin: 0.7em 0;
-}
-
-ul, ol {
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-li {
-  list-style: none;
-  margin: .2em;
-  font-style: normal;
-  transform: translateX(-6px);
-}
-
-li:before {
-  content: var(--emdash);
-  margin-right: 4px;
-}
-
-pre {
-  background: none !important;
-}
-
-code {
-  font-family: var(--monospace) !important;
-  font-style: normal;
-  font-weight: 200 !important;
-  text-align: left;
+.end h2 {
+  font-size: 45px;
+  font-family: var(--sans);
+  font-weight: 300;
 }
 
 a {
   color: currentColor;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-.emphatic {
-  background: var(--orange);
-}
-
-.left {
-  float: left;
-}
-.right {
-  float: right;
 }
 
 .bg {

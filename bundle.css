@@ -554,116 +554,15 @@ main {
   transition: width 1s ease;
 }
 
-.bespoke-bullet {
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
-}
-
-.bespoke-bullet-inactive {
-  opacity: 0;
-}
-
-strong {
-  font-weight: 400;
-}
-
-h1 strong {
-  font-weight: 600;
-}
-
-h1,
-h2,
-h3,
-p,
-li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-h1,
-h2,
-h3,
-p,
-li,
-pre {
-  font-weight: 200;
-}
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-h1 {
+.end h2 {
+  font-size: 45px;
   font-family: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
-}
-
-h1 {
-  margin: 0.17em 0;
-}
-
-h2 {
-  font-family: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1em;
-  margin: 0.1em 0;
-}
-
-h3 {
-  font-style: normal;
-  font-size: 0.8em;
-  margin: 0.7em 0;
-}
-
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-li {
-  list-style: none;
-  margin: .2em;
-  font-style: normal;
-  -webkit-transform: translateX(-6px);
-  -ms-transform: translateX(-6px);
-  transform: translateX(-6px);
-}
-
-li:before {
-  content: '\2014';
-  margin-right: 4px;
-}
-
-pre {
-  background: none !important;
-}
-
-code {
-  font-family: prestige elite std, consolas, courier new, monospace !important;
-  font-style: normal;
-  font-weight: 200 !important;
-  text-align: left;
+  font-weight: 300;
 }
 
 a {
   color: currentColor;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-.emphatic {
-  background: #f30;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
 }
 
 .bg {
