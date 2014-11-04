@@ -3,6 +3,7 @@ var bespoke = require('bespoke');
 var classes = require('bespoke-classes');
 var keys = require('bespoke-keys');
 var touch = require('bespoke-touch');
+var click = require('./click');
 var backdrop = require('bespoke-backdrop');
 var scale = require('bespoke-scale');
 var hash = require('bespoke-hash');
@@ -12,6 +13,7 @@ module.exports = bespoke.from('#slides', [
   classes(),
   keys(),
   touch(),
+  click(),
   backdrop(),
   scale(),
   hash(),

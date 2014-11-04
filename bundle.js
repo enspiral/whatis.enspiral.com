@@ -322,11 +322,30 @@ module.exports = {
 };
 
 },{}],9:[function(require,module,exports){
+module.exports = function () {
+  return function (deck) {
+    // disable right click context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, false);
+    // add click event listeners
+    document.addEventListener('mousedown', function (e) {
+      if (e.which == 1) {
+        deck.next();
+      } else if (e.which == 3) {
+        deck.prev();
+      }
+    });
+  };
+};
+
+},{}],10:[function(require,module,exports){
 var bespoke = require('bespoke');
 
 var classes = require('bespoke-classes');
 var keys = require('bespoke-keys');
 var touch = require('bespoke-touch');
+var click = require('./click');
 var backdrop = require('bespoke-backdrop');
 var scale = require('bespoke-scale');
 var hash = require('bespoke-hash');
@@ -336,6 +355,7 @@ module.exports = bespoke.from('#slides', [
   classes(),
   keys(),
   touch(),
+  click(),
   backdrop(),
   scale(),
   hash(),
@@ -350,4 +370,4 @@ module.exports = bespoke.from('#slides', [
   window.dispatchEvent(evt);
 })();
 
-},{"bespoke":8,"bespoke-backdrop":1,"bespoke-classes":2,"bespoke-hash":3,"bespoke-keys":4,"bespoke-progress":5,"bespoke-scale":6,"bespoke-touch":7}]},{},[9]);
+},{"./click":9,"bespoke":8,"bespoke-backdrop":1,"bespoke-classes":2,"bespoke-hash":3,"bespoke-keys":4,"bespoke-progress":5,"bespoke-scale":6,"bespoke-touch":7}]},{},[10]);
