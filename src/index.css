@@ -5,7 +5,7 @@
   --black: #3f3f3f;
   --orange: #f30;
   --serif: didot, times new roman, serif;
-  --sans-serif: gill sans, helvetica, arial, arial, sans-serif;
+  --sans-serif: 'Open Sans', gill sans, helvetica, arial, arial, sans-serif;
   --monospace: prestige elite std, consolas, courier new, monospace;
   --emdash: '\2014';
   --slideWidth: 720px;
@@ -130,8 +130,7 @@ p {
 }
 
 h1 {
-  font-family: var(--serif);
-  font-style: italic;
+  font-family: var(--sans-serif);
 }
 
 h1 {
