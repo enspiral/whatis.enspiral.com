@@ -8,6 +8,7 @@
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="{{ url }}/{{ image }}" />
     <meta property="og:type" content="{{ type }}" />
+    <meta property="fb:profile_id" content="{{ profile_id }}" />
     <meta property="article:publisher" content="{{ publisher }}" />
     <title>{{ title }}</title>
     {% for href in stylesheets %}
