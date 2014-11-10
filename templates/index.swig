@@ -22,5 +22,6 @@
     {% for href in scripts %}
     <script type="text/javascript" src="{{ href }}"></script>
     {% endfor %}
+    {% include "./analytics.swig" %}
   </body>
 </html>
