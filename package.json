@@ -48,6 +48,7 @@
     "metalsmith-watch": "^0.1.1",
     "myth": "^1.2.1",
     "normalize.css": "^3.0.2",
+    "query-string": "^1.0.0",
     "swig": "^1.4.2",
     "watchify": "^2.0.0"
   },
