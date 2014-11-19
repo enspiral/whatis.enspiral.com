@@ -574,30 +574,62 @@ a {
   background-image: url('images/intro.png');
 }
 
+.svg .intro {
+  background-image: url('images/intro.svg');
+}
+
 .network {
   background-image: url('images/network.png');
+}
+
+.svg .network {
+  background-image: url('images/network.svg');
 }
 
 .decision-making {
   background-image: url('images/decision-making.png');
 }
 
+.svg .decision-making {
+  background-image: url('images/decision-making.svg');
+}
+
 .contributions {
   background-image: url('images/contributions.png');
+}
+
+.svg .contributions {
+  background-image: url('images/contributions.svg');
 }
 
 .collab-funding {
   background-image: url('images/collab-funding.png');
 }
 
+.svg .collab-funding {
+  background-image: url('images/collab-funding.svg');
+}
+
 .engagement {
   background-image: url('images/engagement.png');
+}
+
+.svg .engagement {
+  background-image: url('images/engagement.svg');
 }
 
 .spaces {
   background-image: url('images/spaces.png');
 }
 
+.svg .spaces {
+  background-image: url('images/spaces.svg');
+}
+
 .evolution {
   background-image: url('images/evolution.png');
+}
+
+.svg .evolution {
+  background-image: url('images/evolution.svg');
 }
