@@ -575,7 +575,9 @@ a {
 }
 
 .svg .intro {
-  background-image: url('images/intro.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/intro.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/intro.svg');
 }
 
 .network {
@@ -583,7 +585,9 @@ a {
 }
 
 .svg .network {
-  background-image: url('images/network.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/network.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/network.svg');
 }
 
 .decision-making {
@@ -591,7 +595,9 @@ a {
 }
 
 .svg .decision-making {
-  background-image: url('images/decision-making.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/decision-making.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/decision-making.svg');
 }
 
 .contributions {
@@ -599,7 +605,9 @@ a {
 }
 
 .svg .contributions {
-  background-image: url('images/contributions.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/contributions.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/contributions.svg');
 }
 
 .collab-funding {
@@ -607,7 +615,9 @@ a {
 }
 
 .svg .collab-funding {
-  background-image: url('images/collab-funding.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/collab-funding.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/collab-funding.svg');
 }
 
 .engagement {
@@ -615,7 +625,9 @@ a {
 }
 
 .svg .engagement {
-  background-image: url('images/engagement.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/engagement.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/engagement.svg');
 }
 
 .spaces {
@@ -623,7 +635,9 @@ a {
 }
 
 .svg .spaces {
-  background-image: url('images/spaces.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/spaces.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/spaces.svg');
 }
 
 .evolution {
@@ -631,5 +645,7 @@ a {
 }
 
 .svg .evolution {
-  background-image: url('images/evolution.svg');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('images/evolution.svg');
+  background-image: linear-gradient(transparent, transparent),
+    url('images/evolution.svg');
 }

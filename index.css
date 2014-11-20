@@ -120,7 +120,7 @@ a {
 }
 .svg .intro {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/intro.svg');
 }
 
@@ -129,7 +129,7 @@ a {
 }
 .svg .network {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/network.svg');
 }
 
@@ -138,7 +138,7 @@ a {
 }
 .svg .decision-making {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/decision-making.svg');
 }
 
@@ -147,7 +147,7 @@ a {
 }
 .svg .contributions {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/contributions.svg');
 }
 
@@ -156,7 +156,7 @@ a {
 }
 .svg .collab-funding {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/collab-funding.svg');
 }
 
@@ -165,7 +165,7 @@ a {
 }
 .svg .engagement {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/engagement.svg');
 }
 
@@ -174,7 +174,7 @@ a {
 }
 .svg .spaces {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/spaces.svg');
 }
 
@@ -183,6 +183,6 @@ a {
 }
 .svg .evolution {
   background-image: 
-/*    linear-gradient(transparent, transparent),*/
+    linear-gradient(transparent, transparent),
     url('images/evolution.svg');
 }
