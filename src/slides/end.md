@@ -4,4 +4,4 @@ classes:
   - end
 ---
 
-## [www.enspiral.com](http://www.enspiral.com)
+## [enspiral.com](http://www.enspiral.com)
