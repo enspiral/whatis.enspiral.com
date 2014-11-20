@@ -574,78 +574,80 @@ a {
   background-image: url('images/intro.png');
 }
 
-.svg .intro {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/intro.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/intro.svg');
-}
-
 .network {
   background-image: url('images/network.png');
-}
-
-.svg .network {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/network.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/network.svg');
 }
 
 .decision-making {
   background-image: url('images/decision-making.png');
 }
 
-.svg .decision-making {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/decision-making.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/decision-making.svg');
-}
-
 .contributions {
   background-image: url('images/contributions.png');
-}
-
-.svg .contributions {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/contributions.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/contributions.svg');
 }
 
 .collab-funding {
   background-image: url('images/collab-funding.png');
 }
 
-.svg .collab-funding {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/collab-funding.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/collab-funding.svg');
-}
-
 .engagement {
   background-image: url('images/engagement.png');
-}
-
-.svg .engagement {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/engagement.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/engagement.svg');
 }
 
 .spaces {
   background-image: url('images/spaces.png');
 }
 
-.svg .spaces {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/spaces.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/spaces.svg');
-}
-
 .evolution {
   background-image: url('images/evolution.png');
 }
 
-.svg .evolution {
-  background-image: -webkit-linear-gradient(transparent, transparent), url('images/evolution.svg');
-  background-image: linear-gradient(transparent, transparent),
-    url('images/evolution.svg');
+@media (min-width: 720px) {
+  .intro {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/intro.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/intro.svg');
+  }
+
+  .network {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/network.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/network.svg');
+  }
+
+  .decision-making {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/decision-making.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/decision-making.svg');
+  }
+
+  .contributions {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/contributions.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/contributions.svg');
+  }
+
+  .collab-funding {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/collab-funding.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/collab-funding.svg');
+  }
+
+  .engagement {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/engagement.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/engagement.svg');
+  }
+
+  .spaces {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/spaces.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/spaces.svg');
+  }
+
+  .evolution {
+    background-image: -webkit-linear-gradient(transparent, transparent), url('images/evolution.svg');
+    background-image: linear-gradient(transparent, transparent),
+      url('images/evolution.svg');
+  }
 }

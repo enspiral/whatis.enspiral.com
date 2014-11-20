@@ -322,74 +322,6 @@ module.exports = {
 };
 
 },{}],9:[function(require,module,exports){
-/*!
-	query-string
-	Parse and stringify URL query strings
-	https://github.com/sindresorhus/query-string
-	by Sindre Sorhus
-	MIT License
-*/
-(function () {
-	'use strict';
-	var queryString = {};
-
-	queryString.parse = function (str) {
-		if (typeof str !== 'string') {
-			return {};
-		}
-
-		str = str.trim().replace(/^(\?|#)/, '');
-
-		if (!str) {
-			return {};
-		}
-
-		return str.trim().split('&').reduce(function (ret, param) {
-			var parts = param.replace(/\+/g, ' ').split('=');
-			var key = parts[0];
-			var val = parts[1];
-
-			key = decodeURIComponent(key);
-			// missing `=` should be `null`:
-			// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
-			val = val === undefined ? null : decodeURIComponent(val);
-
-			if (!ret.hasOwnProperty(key)) {
-				ret[key] = val;
-			} else if (Array.isArray(ret[key])) {
-				ret[key].push(val);
-			} else {
-				ret[key] = [ret[key], val];
-			}
-
-			return ret;
-		}, {});
-	};
-
-	queryString.stringify = function (obj) {
-		return obj ? Object.keys(obj).map(function (key) {
-			var val = obj[key];
-
-			if (Array.isArray(val)) {
-				return val.map(function (val2) {
-					return encodeURIComponent(key) + '=' + encodeURIComponent(val2);
-				}).join('&');
-			}
-
-			return encodeURIComponent(key) + '=' + encodeURIComponent(val);
-		}).join('&') : '';
-	};
-
-	if (typeof define === 'function' && define.amd) {
-		define(function() { return queryString; });
-	} else if (typeof module !== 'undefined' && module.exports) {
-		module.exports = queryString;
-	} else {
-		window.queryString = queryString;
-	}
-})();
-
-},{}],10:[function(require,module,exports){
 module.exports = function () {
   return function (deck) {
     // disable right click context menu
@@ -407,20 +339,7 @@ module.exports = function () {
   };
 };
 
-},{}],11:[function(require,module,exports){
-var QS = require('query-string');
-
-module.exports = function () {
-  return function (deck) {
-    // get query string
-    var query = QS.parse(window.location.search.substring(1));
-    if (query.highres) {
-      deck.parent.classList.add('svg');
-    }
-  };
-};
-
-},{"query-string":9}],12:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var bespoke = require('bespoke');
 
 var classes = require('bespoke-classes');
@@ -432,7 +351,7 @@ var scale = require('bespoke-scale');
 var hash = require('bespoke-hash');
 var progress = require('bespoke-progress');
 
-var highres = require('./highres');
+//var highres = require('./highres');
 
 module.exports = bespoke.from('#slides', [
   classes(),
@@ -443,7 +362,7 @@ module.exports = bespoke.from('#slides', [
   scale(),
   hash(),
   progress(),
-  highres(),
+  //highres(),
 ])
 ;
 
@@ -454,4 +373,4 @@ module.exports = bespoke.from('#slides', [
   window.dispatchEvent(evt);
 })();
 
-},{"./click":10,"./highres":11,"bespoke":8,"bespoke-backdrop":1,"bespoke-classes":2,"bespoke-hash":3,"bespoke-keys":4,"bespoke-progress":5,"bespoke-scale":6,"bespoke-touch":7}]},{},[12]);
+},{"./click":9,"bespoke":8,"bespoke-backdrop":1,"bespoke-classes":2,"bespoke-hash":3,"bespoke-keys":4,"bespoke-progress":5,"bespoke-scale":6,"bespoke-touch":7}]},{},[10]);
