@@ -9,7 +9,7 @@ var scale = require('bespoke-scale');
 var hash = require('bespoke-hash');
 var progress = require('bespoke-progress');
 
-var highres = require('./highres');
+//var highres = require('./highres');
 
 module.exports = bespoke.from('#slides', [
   classes(),
@@ -20,7 +20,7 @@ module.exports = bespoke.from('#slides', [
   scale(),
   hash(),
   progress(),
-  highres(),
+  //highres(),
 ])
 ;
 
