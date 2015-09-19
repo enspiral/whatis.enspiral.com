@@ -90,30 +90,29 @@ module.exports = function() {
 },{}],3:[function(require,module,exports){
 module.exports = function() {
   return function(deck) {
-    var activeIndex,
+    var parseHash = function() {
+      var hash = window.location.hash.slice(1),
+        slideNumberOrName = parseInt(hash, 10);
 
-      parseHash = function() {
-        var hash = window.location.hash.slice(1),
-          slideNumberOrName = parseInt(hash, 10);
-
-        if (hash) {
-          if (slideNumberOrName) {
-            activateSlide(slideNumberOrName - 1);
-          } else {
-            deck.slides.forEach(function(slide, i) {
-              if (slide.getAttribute('data-bespoke-hash')) {
-                activateSlide(i);
-              }
-            });
-          }
+      if (hash) {
+        if (slideNumberOrName) {
+          activateSlide(slideNumberOrName - 1);
+        } else {
+          deck.slides.forEach(function(slide, i) {
+            if (slide.getAttribute('data-bespoke-hash') === hash) {
+              activateSlide(i);
+            }
+          });
         }
-      },
+      }
+    };
 
-      activateSlide = function(index) {
-        if (index !== activeIndex) {
-          deck.slide(index);
-        }
-      };
+    var activateSlide = function(index) {
+      var indexToActivate = -1 < index && index < deck.slides.length ? index : 0;
+      if (indexToActivate !== deck.slide()) {
+        deck.slide(indexToActivate);
+      }
+    };
 
     setTimeout(function() {
       parseHash();
@@ -121,7 +120,6 @@ module.exports = function() {
       deck.on('activate', function(e) {
         var slideName = e.slide.getAttribute('data-bespoke-hash');
         window.location.hash = slideName || e.index + 1;
-        activeIndex = e.index;
       });
 
       window.addEventListener('hashchange', parseHash);
@@ -136,12 +134,13 @@ module.exports = function(options) {
 
     document.addEventListener('keydown', function(e) {
       if (e.which == 34 || // PAGE DOWN
-        e.which == 32 || // SPACE
+        (e.which == 32 && !e.shiftKey) || // SPACE WITHOUT SHIFT
         (isHorizontal && e.which == 39) || // RIGHT
         (!isHorizontal && e.which == 40) // DOWN
       ) { deck.next(); }
 
       if (e.which == 33 || // PAGE UP
+        (e.which == 32 && e.shiftKey) || // SPACE + SHIFT
         (isHorizontal && e.which == 37) || // LEFT
         (!isHorizontal && e.which == 38) // UP
       ) { deck.prev(); }
