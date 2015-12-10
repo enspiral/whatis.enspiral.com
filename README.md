@@ -1,6 +1,7 @@
 # slidedeck
 
-[whatis.enspiral.com](http://whatis.enspiral.com)
+English: [whatis.enspiral.com](http://whatis.enspiral.com)
+Chinese: [audreyt.github.io/whatis.enspiral.com/](https://audreyt.github.io/whatis.enspiral.com/)
 
 ## how to
 
