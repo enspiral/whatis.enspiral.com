@@ -1,0 +1,11 @@
+defaultLocale: en
+url: http://whatis.enspiral.com
+image: images/intro.png
+type: article
+publisher: https://www.facebook.com/Enspiral
+profileId: 161369397227484
+stylesheets:
+  - href: "/bundle.css"
+  - href: "http://fonts.googleapis.com/css?family=Open+Sans:300"
+scripts:
+  - href: "/bundle.js"
