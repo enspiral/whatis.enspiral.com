@@ -11,7 +11,7 @@ var progress = require('bespoke-progress');
 
 //var highres = require('./highres');
 
-module.exports = bespoke.from('#slides', [
+module.exports = bespoke.from('.slides', [
   classes(),
   keys(),
   touch(),

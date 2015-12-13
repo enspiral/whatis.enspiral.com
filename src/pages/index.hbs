@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="{{ formatMessage (intlGet 'messages.title') }}" />
+    <meta property="og:site_name" content="{{ formatMessage (intlGet 'messages.siteName') }}" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:description" content="{{ formatMessage (intlGet 'messages.description') }}" />
+    <meta property="og:image" content="{{ url }}/{{ image }}" />
+    <meta property="og:type" content="{{ type }}" />
+    <meta property="fb:profile_id" content="{{ profileId }}" />
+    <meta property="article:publisher" content="{{ publisher }}" />
+
+    <title>{{ formatMessage (intlGet 'messages.title') }}</title>
+
+    {{#each stylesheets}}
+    <link rel="stylesheet" type="text/css" href="{{ href }}" />
+    {{/each}}
+
+  </head>
+  <body>
+
+    <main>
+      <a href="https://github.com/enspiral/whatis.enspiral.com/" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+      <div class="slides">
+        <div class="slide slide1">
+         <img src="/images/intro.svg">
+         <h1>{{ formatMessage (intlGet 'messages.intro') }}</h1>
+         <ul class="values">
+           <li>{{ formatMessage (intlGet 'messages.value1') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value2') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value3') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value4') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value5') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value6') }}</li>
+         </ul>
+        </div>
+
+        <div class="slide">
+         <img src="/images/network.svg">
+         <h2>{{ formatMessage (intlGet 'messages.network') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.network-msg') }}</p>
+        </div>
+
+        <div class="slide">
+         <img src="/images/decision-making.svg">
+         <h2>{{ formatMessage (intlGet 'messages.decision-making') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.decision-making-msg') }}</p>
+        </div>
+
+        <div class="slide">
+         <img src="/images/contributions.svg">
+         <h2>{{ formatMessage (intlGet 'messages.contributions') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.contributions-msg') }}</p>
+        </div>
+
+        <div class="slide">
+         <img src="/images/collab-funding.svg">
+         <h2>{{ formatMessage (intlGet 'messages.collab-funding') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.collab-funding-msg') }}</p>
+        </div>
+
+        <div class="slide img-with-callouts">
+         <img src="/images/engagement.svg">
+         <div class="callout" id="callout1">
+           <h4>{{ formatMessage (intlGet 'messages.foundation') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.foundation-msg') }}</p>
+         </div>
+         <div class="callout" id="callout2">
+           <h4>{{ formatMessage (intlGet 'messages.friends') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.friends-msg') }}</p>
+         </div>
+         <div class="callout" id="callout3">
+           <h4>{{ formatMessage (intlGet 'messages.contributors') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.contributors-msg') }}</p>
+         </div>
+         <div class="callout" id="callout4">
+           <h4>{{ formatMessage (intlGet 'messages.members') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.members-msg') }}</p>
+         </div>
+         <div class="callout" id="callout5">
+           <h4>{{ formatMessage (intlGet 'messages.enspiral-network') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.enspiral-network-msg') }}</p>
+         </div>
+         <h2>{{ formatMessage (intlGet 'messages.engagement') }}</h2>
+        </div>
+
+        <div class="slide">
+          <div class="offline">
+            <h3>{{ formatMessage (intlGet 'messages.offline') }}</h3>
+            <div class="left">
+             <img src="/images/enspiral-space.svg">
+             <h4><a href="http://enspiralspace.co.nz">{{ formatMessage (intlGet 'messages.space') }}</a></h4>
+             <h3>{{ formatMessage (intlGet 'messages.space-msg') }}</h3>
+            </div>
+            <div class="right">
+             <img src="/images/enspiral-retreat.svg">
+             <h4><a href="http://retreat.enspiral.com">{{ formatMessage (intlGet 'messages.retreat') }}</a></h4>
+             <h3>{{ formatMessage (intlGet 'messages.retreat-msg') }}</h3>
+            </div>
+          </div>
+          <div class="online">
+            <h3>{{ formatMessage (intlGet 'messages.online') }}</h3>
+            <img src="/images/online-spaces.svg">
+          </div>
+          <h2>{{ formatMessage (intlGet 'messages.collaboration') }}</h2>
+        </div>
+
+        <div class="slide">
+          <div class="evolution row">
+            <img src="/images/evolution1.svg">
+            <div class="evolution col left"><p>{{ formatMessage (intlGet 'messages.evolution1') }}</p></div>
+            <div class="evolution col right"><p>{{ formatMessage (intlGet 'messages.evolution2') }}</p></div>
+          </div>
+          <div class="evolution row">
+            <img src="/images/evolution2.svg">
+            <div class="evolution col left"><p>{{ formatMessage (intlGet 'messages.evolution3') }}</p></div>
+            <div class="evolution col right"><p>{{ formatMessage (intlGet 'messages.evolution4') }}</p></div>
+          </div>
+         <h2>{{ formatMessage (intlGet 'messages.evolution') }}</h2>
+        </div>
+
+        <div class="slide">
+         <h1><a href="http://enspiral.com">enspiral.com</a></h1>
+        </div>
+      </div>
+    </main>
+
+    {{#each scripts}}
+    <script type="text/javascript" src="{{ href }}"></script>
+    {{/each}}
+
+    {{> analytics }}
+  </body>
+</html>
