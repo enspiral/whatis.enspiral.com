@@ -23,96 +23,103 @@
   <body>
 
     <main>
-      <a href="https://github.com/enspiral/whatis.enspiral.com/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+      <a href="https://github.com/enspiral/whatis.enspiral.com/" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
       <div class="slides">
         <div class="slide slide1">
          <img src="/images/intro.svg">
-         <h1>More people working on stuff that matters</h1>
-         <ul class="values"><li>Collaboration</li><li>Autonomy</li><li>Transparency</li><li>Diversity</li><li>Entrepreneurialism</li><li>Non-hierarchy</li></ul>
+         <h1>{{ formatMessage (intlGet 'messages.intro') }}</h1>
+         <ul class="values">
+           <li>{{ formatMessage (intlGet 'messages.value1') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value2') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value3') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value4') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value5') }}</li>
+           <li>{{ formatMessage (intlGet 'messages.value6') }}</li>
+         </ul>
         </div>
 
         <div class="slide">
          <img src="/images/network.svg">
-         <h2>The Enspiral Network</h2>
-         <p>Social enterprise ventures and social entrepreneurs working together with shared vision and values.</p>
+         <h2>{{ formatMessage (intlGet 'messages.network') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.network-msg') }}</p>
         </div>
 
         <div class="slide">
          <img src="/images/decision-making.svg">
-         <h2>Collaborative Decision-Making</h2>
-         <p>Diverse perspectives come together to make decisions online, enabling shared understanding and collective action.</p>
+         <h2>{{ formatMessage (intlGet 'messages.decision-making') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.decision-making-msg') }}</p>
         </div>
 
         <div class="slide">
          <img src="/images/contributions.svg">
-         <h2>Voluntary Contributions</h2>
-         <p>Enspiral Ventures contribute money, time, and skills to the Ensiral Foundation, which become shared resources.</p>
+         <h2>{{ formatMessage (intlGet 'messages.contributions') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.contributions-msg') }}</p>
         </div>
 
         <div class="slide">
          <img src="/images/collab-funding.svg">
-         <h2>Collaborative Funding</h2>
-         <p>Projects to support the network and its vision are funded using at transparent participatory budgeting process.</p>
+         <h2>{{ formatMessage (intlGet 'messages.collab-funding') }}</h2>
+         <p>{{ formatMessage (intlGet 'messages.collab-funding-msg') }}</p>
         </div>
 
         <div class="slide img-with-callouts">
          <img src="/images/engagement.svg">
          <div class="callout" id="callout1">
-           <h4>Enspiral Foundation</h4>
-           <p>Collectively owned by the members</p>
+           <h4>{{ formatMessage (intlGet 'messages.foundation') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.foundation-msg') }}</p>
          </div>
          <div class="callout" id="callout2">
-           <h4>Friends &amp; Partners</h4>
-           <p>form a wider ecosystem of supporters</p>
+           <h4>{{ formatMessage (intlGet 'messages.friends') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.friends-msg') }}</p>
          </div>
          <div class="callout" id="callout3">
-           <h4>Contributors</h4>
-           <p>are involved in collaboration and decision-making</p>
+           <h4>{{ formatMessage (intlGet 'messages.contributors') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.contributors-msg') }}</p>
          </div>
          <div class="callout" id="callout4">
-           <h4>Enspiral Members</h4>
-           <p>invite ventures, contributors, and new members</p>
+           <h4>{{ formatMessage (intlGet 'messages.members') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.members-msg') }}</p>
          </div>
          <div class="callout" id="callout5">
-           <h4>Enspiral Network</h4>
-           <p>community of people and ventures</p>
+           <h4>{{ formatMessage (intlGet 'messages.enspiral-network') }}</h4>
+           <p>{{ formatMessage (intlGet 'messages.enspiral-network-msg') }}</p>
          </div>
-         <h2>Levels of Engagement</h2>
+         <h2>{{ formatMessage (intlGet 'messages.engagement') }}</h2>
         </div>
 
         <div class="slide">
           <div class="offline">
-            <h3>Offline</h3>
+            <h3>{{ formatMessage (intlGet 'messages.offline') }}</h3>
             <div class="left">
              <img src="/images/enspiral-space.svg">
-             <h4><a href="http://enspiralspace.co.nz">Enspiral Space</a></h4>
-             <h3>Coworking hub</h3>
+             <h4><a href="http://enspiralspace.co.nz">{{ formatMessage (intlGet 'messages.space') }}</a></h4>
+             <h3>{{ formatMessage (intlGet 'messages.space-msg') }}</h3>
             </div>
             <div class="right">
              <img src="/images/enspiral-retreat.svg">
-             <h4><a href="http://retreat.enspiral.com">Enspiral Retreat</a></h4>
-             <h3>Every six months</h3>
+             <h4><a href="http://retreat.enspiral.com">{{ formatMessage (intlGet 'messages.retreat') }}</a></h4>
+             <h3>{{ formatMessage (intlGet 'messages.retreat-msg') }}</h3>
             </div>
           </div>
           <div class="online">
-            <h3>Online</h3>
+            <h3>{{ formatMessage (intlGet 'messages.online') }}</h3>
             <img src="/images/online-spaces.svg">
           </div>
-          <h2>Spaces for Collaboration</h2>
+          <h2>{{ formatMessage (intlGet 'messages.collaboration') }}</h2>
         </div>
 
         <div class="slide">
           <div class="evolution row">
             <img src="/images/evolution1.svg">
-            <div class="evolution col left"><p>A vision to make the world a better place through meaningful work</p></div>
-            <div class="evolution col right"><p>Diverse professionals drawn together by shared values</p></div>
+            <div class="evolution col left"><p>{{ formatMessage (intlGet 'messages.evolution1') }}</p></div>
+            <div class="evolution col right"><p>{{ formatMessage (intlGet 'messages.evolution2') }}</p></div>
           </div>
           <div class="evolution row">
             <img src="/images/evolution2.svg">
-            <div class="evolution col left"><p>A network of companies connected through the Foundation</p></div>
-            <div class="evolution col right"><p>Open-sourcing innovative participatory tools and processes</p></div>
+            <div class="evolution col left"><p>{{ formatMessage (intlGet 'messages.evolution3') }}</p></div>
+            <div class="evolution col right"><p>{{ formatMessage (intlGet 'messages.evolution4') }}</p></div>
           </div>
-         <h2>Enspiral's Evolution</h2>
+         <h2>{{ formatMessage (intlGet 'messages.evolution') }}</h2>
         </div>
 
         <div class="slide">
