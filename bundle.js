@@ -90,6 +90,13 @@ module.exports = function() {
 },{}],3:[function(require,module,exports){
 module.exports = function() {
   return function(deck) {
+    var activateSlide = function(index) {
+      var indexToActivate = -1 < index && index < deck.slides.length ? index : 0;
+      if (indexToActivate !== deck.slide()) {
+        deck.slide(indexToActivate);
+      }
+    };
+
     var parseHash = function() {
       var hash = window.location.hash.slice(1),
         slideNumberOrName = parseInt(hash, 10);
@@ -99,7 +106,7 @@ module.exports = function() {
           activateSlide(slideNumberOrName - 1);
         } else {
           deck.slides.forEach(function(slide, i) {
-            if (slide.getAttribute('data-bespoke-hash') === hash) {
+            if (slide.getAttribute('data-bespoke-hash') === hash || slide.id === hash) {
               activateSlide(i);
             }
           });
@@ -107,18 +114,11 @@ module.exports = function() {
       }
     };
 
-    var activateSlide = function(index) {
-      var indexToActivate = -1 < index && index < deck.slides.length ? index : 0;
-      if (indexToActivate !== deck.slide()) {
-        deck.slide(indexToActivate);
-      }
-    };
-
     setTimeout(function() {
       parseHash();
 
       deck.on('activate', function(e) {
-        var slideName = e.slide.getAttribute('data-bespoke-hash');
+        var slideName = e.slide.getAttribute('data-bespoke-hash') || e.slide.id;
         window.location.hash = slideName || e.index + 1;
       });
 
@@ -243,9 +243,9 @@ module.exports = function(options) {
 };
 
 },{}],8:[function(require,module,exports){
-var from = function(selectorOrElement, plugins) {
-  var parent = selectorOrElement.nodeType === 1 ? selectorOrElement : document.querySelector(selectorOrElement),
-    slides = [].filter.call(parent.children, function(el) { return el.nodeName !== 'SCRIPT'; }),
+var from = function(opts, plugins) {
+  var parent = (opts.parent || opts).nodeType === 1 ? (opts.parent || opts) : document.querySelector(opts.parent || opts),
+    slides = [].filter.call(typeof opts.slides === 'string' ? parent.querySelectorAll(opts.slides) : (opts.slides || parent.children), function(el) { return el.nodeName !== 'SCRIPT'; }),
     activeSlide = slides[0],
     listeners = {},
 
@@ -275,12 +275,11 @@ var from = function(selectorOrElement, plugins) {
 
     on = function(eventName, callback) {
       (listeners[eventName] || (listeners[eventName] = [])).push(callback);
+      return off.bind(null, eventName, callback);
+    },
 
-      return function() {
-        listeners[eventName] = listeners[eventName].filter(function(listener) {
-          return listener !== callback;
-        });
-      };
+    off = function(eventName, callback) {
+      listeners[eventName] = (listeners[eventName] || []).filter(function(listener) { return listener !== callback; });
     },
 
     fire = function(eventName, eventData) {
@@ -299,6 +298,7 @@ var from = function(selectorOrElement, plugins) {
 
     deck = {
       on: on,
+      off: off,
       fire: fire,
       slide: slide,
       next: step.bind(null, 1),
