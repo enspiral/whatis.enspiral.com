@@ -7,4 +7,6 @@ app.use(require('ecstatic')({
   showDir: false,
 }));
 
-app.listen(5000);
+app.listen(5000, () => {
+  console.log('Server is listening on http://localhost:5000. Use Ctrl-c to stop.')
+});
